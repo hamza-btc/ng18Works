@@ -1,0 +1,66 @@
+<!-- <ul>
+  @for (item of dataCourses; track $index) {
+  <li>
+    {{ item.title }}
+  </li>
+  }
+</ul> -->
+
+<div class="flex mt-10 justufy-center">
+  <div class="overflow-x-auto">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Published</th>
+          <th>Image</th>
+          <th>Title</th>
+          <th>Content</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (course of dataCourses; track $index) {
+        <tr>
+          <th>
+            <input
+              type="checkbox"
+              class="toggle toggle-md toggle-success"
+              [checked]="course.active"
+            />
+          </th>
+          <td>
+            <img
+              width="150px"
+              class="rounded-box"
+              [src]="course.url"
+              [alt]="course.title"
+            />
+          </td>
+          <td>{{ course.title }}</td>
+          <td>{{ course.content }}</td>
+          <td>
+            <div class="badge badge-lg badge-accent">{{ course.price }}</div>
+          </td>
+          <td noWrap="true">
+            <button
+              (click)="requestEditCourse(course)"
+              data-tip="Edit"
+              class="btn btn-sm mr-2 btn-warning tooltip tooltip-warning"
+            >
+              <app-edit-icon [size]="4"></app-edit-icon>
+            </button>
+            <button
+              (click)="requestDeleteCourse(course.id)"
+              data-tip="Delete"
+              class="btn btn-sm btn-error tooltip tooltip-error"
+            >
+              <app-delete-icon [size]="4"></app-delete-icon>
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

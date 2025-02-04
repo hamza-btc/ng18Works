@@ -1,0 +1,261 @@
+{
+  "articles": [
+    {
+      "title": "ddedee",
+      "body": "dedede",
+      "category": "Furniture",
+      "image": "htghtt",
+      "id": 1
+    },
+    {
+      "title": "Learn Java et spring boot",
+      "category": "Tops",
+      "body": "Learn Java is a good things",
+      "image": "https://cdn3.pixelcut.app/7/20/uncrop_hero_bdf08a8ca6.jpg",
+      "id": 2,
+      "views": 5
+    },
+    {
+      "title": "hamza",
+      "category": "Vehicle",
+      "body": "dvvdvdvd\nvdv\ndvdvdvd\nvdvdv",
+      "image": "https://cdn.futura-sciences.com/sources/images/AI-creation.jpg",
+      "views": 0,
+      "author": "",
+      "reaction": {
+        "likes": 10,
+        "dislikes": 18
+      },
+      "id": 3
+    },
+    {
+      "title": "hamza",
+      "category": "Kitchen Accessories",
+      "body": "ddddddddddddeddede",
+      "image": "https://cdn.futura-sciences.com/sources/images/AI-creation.jpg",
+      "views": 0,
+      "author": "",
+      "reaction": {
+        "likes": 7,
+        "dislikes": 11
+      },
+      "id": 4
+    },
+    {
+      "title": "image 1",
+      "category": "Tops",
+      "body": "image 1 foll all in oine way",
+      "image": "https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=",
+      "views": "",
+      "author": "",
+      "reaction": {
+        "likes": 7,
+        "dislikes": 4
+      },
+      "id": 5
+    },
+    {
+      "title": "dede",
+      "category": "Fragrances",
+      "body": "deed",
+      "image": "dedede",
+      "views": 0,
+      "author": "",
+      "reaction": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "id": 6
+    },
+    {
+      "title": "ded",
+      "category": "Fragrances",
+      "body": "deded",
+      "image": "dedede",
+      "views": 0,
+      "author": "",
+      "reaction": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "id": 7
+    },
+    {
+      "title": "hamza",
+      "category": "Fragrances",
+      "body": "hamza is body",
+      "image": "https://cdn3.pixelcut.app/7/20/uncrop_hero_bdf08a8ca6.jpg",
+      "views": 0,
+      "author": "",
+      "reaction": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "id": 8
+    },
+    {
+      "title": "",
+      "category": "Tops",
+      "body": "deede",
+      "image": "dedede",
+      "views": 0,
+      "author": "",
+      "reaction": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "id": 9
+    },
+    {
+      "title": "",
+      "category": "",
+      "body": "",
+      "image": "",
+      "views": 0,
+      "author": "",
+      "reaction": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "id": 10
+    },
+    {
+      "title": "",
+      "category": "",
+      "body": "",
+      "image": "",
+      "views": 0,
+      "author": "",
+      "reaction": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "id": 11
+    },
+    {
+      "title": "",
+      "category": "",
+      "body": "",
+      "image": "",
+      "views": 0,
+      "author": "",
+      "reaction": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "id": 12
+    },
+    {
+      "title": "DEDE",
+      "category": "Fragrances",
+      "body": "DEDE",
+      "image": "https://cdn3.pixelcut.app/7/20/uncrop_hero_bdf08a8ca6.jpg",
+      "views": 0,
+      "author": "",
+      "reaction": {
+        "likes": 4,
+        "dislikes": 3
+      },
+      "id": 13
+    }
+  ],
+  "categories": [
+    {
+      "slug": "beauty",
+      "name": "Beauty"
+    },
+    {
+      "slug": "fragrances",
+      "name": "Fragrances"
+    },
+    {
+      "slug": "furniture",
+      "name": "Furniture"
+    },
+    {
+      "slug": "groceries",
+      "name": "Groceries"
+    },
+    {
+      "slug": "home-decoration",
+      "name": "Home Decoration"
+    },
+    {
+      "slug": "kitchen-accessories",
+      "name": "Kitchen Accessories"
+    },
+    {
+      "slug": "laptops",
+      "name": "Laptops"
+    },
+    {
+      "slug": "mens-shirts",
+      "name": "Mens Shirts"
+    },
+    {
+      "slug": "mens-shoes",
+      "name": "Mens Shoes"
+    },
+    {
+      "slug": "mens-watches",
+      "name": "Mens Watches"
+    },
+    {
+      "slug": "mobile-accessories",
+      "name": "Mobile Accessories"
+    },
+    {
+      "slug": "motorcycle",
+      "name": "Motorcycle"
+    },
+    {
+      "slug": "skin-care",
+      "name": "Skin Care"
+    },
+    {
+      "slug": "smartphones",
+      "name": "Smartphones"
+    },
+    {
+      "slug": "sports-accessories",
+      "name": "Sports Accessories"
+    },
+    {
+      "slug": "sunglasses",
+      "name": "Sunglasses"
+    },
+    {
+      "slug": "tablets",
+      "name": "Tablets"
+    },
+    {
+      "slug": "tops",
+      "name": "Tops"
+    },
+    {
+      "slug": "vehicle",
+      "name": "Vehicle"
+    },
+    {
+      "slug": "womens-bags",
+      "name": "Womens Bags"
+    },
+    {
+      "slug": "womens-dresses",
+      "name": "Womens Dresses"
+    },
+    {
+      "slug": "womens-jewellery",
+      "name": "Womens Jewellery"
+    },
+    {
+      "slug": "womens-shoes",
+      "name": "Womens Shoes"
+    },
+    {
+      "slug": "womens-watches",
+      "name": "Womens Watches"
+    }
+  ],
+  "users": []
+}

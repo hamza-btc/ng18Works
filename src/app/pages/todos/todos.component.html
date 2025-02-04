@@ -22,11 +22,15 @@
         id nisi.
       </p>
       <button
+        [ngStyle]="{
+          color: editable ? 'red' : 'green',
+          'font-size': editable ? '10px' : '20px'
+        }"
         (click)="toggleForm()"
         class="btn btn-neutral"
         [ngClass]="{
-          'btn-primary': shwoForm,
-          'btn-': shwoForm === false,
+          'btn-primary': shwoForm && !editable,
+          'btn-neutral': !shwoForm,
           'btn-warning': editable
         }"
       >
@@ -39,6 +43,7 @@
 <div class="flex flex-col gap-4 items-center mt-10">
   @if (shwoForm) {
   <input
+    (keyup.enter)="submit()"
     [(ngModel)]="myTodo"
     type="text"
     [placeholder]="defaultTodo"
@@ -47,12 +52,12 @@
 
   @if (editable) {
   <div class="flex gap-10">
-    <button class="btn w-52 btn-warning" (click)="updateTodo()">Update</button>
+    <button class="btn w-52 btn-warning" (click)="submit()">Update</button>
     <button class="btn btn-neutral" (click)="cancel()">Cancel</button>
   </div>
 
   } @else {
-  <button class="btn btn-wide btn-primary" (click)="addTodo()">Create</button>
+  <button class="btn btn-wide btn-primary" (click)="submit()">Create</button>
   } } @else {
   <p>Click the show the button above</p>
   }
@@ -61,15 +66,21 @@
     let f= $first ; let l =$last ) {
     <li>
       <!-- <span> {{ todo }} - {{ l }} - {{ f }} - {{ id }} - {{ o }}</span> -->
-      <span> {{ todo }} </span>
+      <span (dblclick)="deleteTodo(id)"> {{ todo }} </span>
       <div class="justify-end">
-        <button class="btn btn-error btn-sm" (click)="editTodo(todo, id)">
-          Edit
+        <button
+          data-tip="Edit"
+          class="btn btn-error btn-sm tooltip"
+          (click)="editTodo(todo, id)"
+        >
+          <app-edit-icon></app-edit-icon>
         </button>
+
         @if (!editable) {
         <button class="btn btn-warning btn-sm" (click)="deleteTodo(id)">
-          Delete
+          <app-delete-icon></app-delete-icon>
         </button>
+
         }
       </div>
     </li>

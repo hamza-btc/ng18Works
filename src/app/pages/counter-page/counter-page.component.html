@@ -1,0 +1,18 @@
+@let count = (counterServices.count | async) ?? 0;
+
+<div class="flex justify-center mt-20 mb-8">
+  <h1 class="font-black text-3xl">
+    {{ count }}
+  </h1>
+</div>
+<div class="flex justify-between my-20mx-36">
+  <button class="btn btn-success" (click)="counterServices.increment()">
+    Increment
+  </button>
+  <button class="btn btn-error" (click)="counterServices.dececrement()">
+    Decrement
+  </button>
+  <button class="btn btn-warning" (click)="counterServices.reset()">
+    Reset
+  </button>
+</div>

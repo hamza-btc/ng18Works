@@ -1,0 +1,40 @@
+<div class="flex my-10 mx-4 justify-between">
+  <h1 class="font-black text-2xl">List of Users</h1>
+  <input
+    (input)="searchUsers()"
+    [(ngModel)]="search"
+    placeholder="Search..."
+    type="search"
+    class="input input-bordered"
+  />
+</div>
+
+<button #load (click)="show()" class="btn btn-sm btn-primary my-4">Load</button>
+
+@defer (when isVisible) {
+
+<app-list-github [users]="users"></app-list-github>
+
+} @placeholder {
+<app-skeleton-card></app-skeleton-card>
+
+} @loading(minimum 0.5s) {
+<app-loading></app-loading>
+} @error {
+<div role="alert" class="alert alert-error">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    class="stroke-info shrink-0 w-6 h-6"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+    ></path>
+  </svg>
+  <span> Error! Loading data is faille !!!</span>
+</div>
+}

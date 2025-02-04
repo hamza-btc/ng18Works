@@ -1,0 +1,13 @@
+<div class="flex my-5 justify-center">
+  <div class="join">
+    @for (page of pages; track $index) {
+    <button
+      (click)="onPageChange(page)"
+      [ngClass]="{ 'btn-active': page === currentPage }"
+      class="join-item btn"
+    >
+      {{ page }}
+    </button>
+    }
+  </div>
+</div>

@@ -4,5 +4,8 @@
 @tailwind utilities;
 
 .body {
-    background-color: bg-neutral;
+  background-color: bg-neutral;
+}
+.container {
+  width: 1286px !important;
 }

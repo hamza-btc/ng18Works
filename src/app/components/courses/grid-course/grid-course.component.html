@@ -1,0 +1,10 @@
+<div
+  class="grid cs:grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 lg:grid-cols-3 mt-6 gap-4 mx-4"
+>
+  @for (course of dataCourses; track $index) {
+  <app-card-course
+    [course]="course"
+    (delete)="requestDeleteCourse(course.id)"
+  ></app-card-course>
+  }
+</div>

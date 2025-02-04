@@ -1,11 +1,20 @@
-import { NgClass } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { Notification } from '../../models/notification';
+import { EditIconComponent } from '../../components/icons/edit-icon/edit-icon.component';
+import { DeleteIconComponent } from '../../components/icons/delete-icon/delete-icon.component';
 
 @Component({
   selector: 'app-todos',
-  imports: [FormsModule, NgClass],
+  imports: [
+    FormsModule,
+    NgClass,
+    NgStyle,
+    EditIconComponent,
+    DeleteIconComponent,
+  ],
   templateUrl: './todos.component.html',
   styleUrl: './todos.component.css',
 })
@@ -26,7 +35,7 @@ export class TodosComponent implements OnInit {
     this.shwoForm = !this.shwoForm;
   }
 
-  triggerNotify(cusutmNotify: any) {
+  triggerNotify(cusutmNotify: Notification) {
     this.notification = {
       ...cusutmNotify,
     };
@@ -46,13 +55,13 @@ export class TodosComponent implements OnInit {
 
   addTodo() {
     this.todos = [this.myTodo, ...this.todos];
-    this.initTodo();
     this.triggerNotify({
       message: 'Todo created Succefuly',
       position: 'toast-top toast-end',
       alertClass: 'alert-success',
       duration: 90000,
     });
+    this.initTodo();
   }
 
   editTodo(todo: string, index: number) {
@@ -111,9 +120,10 @@ export class TodosComponent implements OnInit {
     this.editable = false;
     this.todoIndex = null;
     this.shwoForm = false;
+    this.myTodo = '';
   }
 
-  notification = {
+  notification: Notification = {
     message: '',
     position: '',
     alertClass: '',
@@ -128,5 +138,28 @@ export class TodosComponent implements OnInit {
       alertClass: 'alert-error',
       duration: 2000,
     });
+  }
+  submit() {
+    if (!this.validateTodo()) {
+      return;
+    }
+    if (this.editable) {
+      this.updateTodo();
+    } else {
+      this.addTodo();
+    }
+  }
+  validateTodo() {
+    if (!this.myTodo) {
+      this.triggerNotify({
+        message: 'Todo is required',
+        position: 'toast-end',
+        alertClass: 'alert-error',
+        duration: 2000,
+      });
+
+      return false;
+    }
+    return true;
   }
 }

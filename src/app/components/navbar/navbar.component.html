@@ -4,8 +4,54 @@
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
-      <li><a>Toos</a></li>
+      <li>
+        <a
+          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="['/home']"
+          routerLinkActive="nav-active"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="['/blog/list']"
+          routerLinkActive="nav-active"
+          >Blog</a
+        >
+      </li>
+      <li>
+        <a
+          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="['/todos']"
+          routerLinkActive="nav-active"
+          >Todos</a
+        >
+      </li>
+      <li>
+        <a
+          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="['/elearning']"
+          routerLinkActive="nav-active"
+          >Elearning {{ counterService.count | async }}</a
+        >
+      </li>
+      <li>
+        <a
+          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="['/counter']"
+          routerLinkActive="nav-active"
+          >Counter</a
+        >
+      </li>
+      <li>
+        <a
+          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="['/users']"
+          routerLinkActive="nav-active"
+          >Users</a
+        >
+      </li>
     </ul>
   </div>
 </div>
